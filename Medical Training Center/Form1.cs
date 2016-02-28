@@ -21,7 +21,7 @@ namespace Medical_Training_Center
         static int CurrentQuestionID = 0;
         string caseSelection = string.Empty;
         static int intVisualMemPicCount = 0;
-        DataSet ds;
+        DataSet  ds;
         PictureBox LocalPictureBox;
 
 
