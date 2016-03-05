@@ -40,12 +40,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnWrong = new System.Windows.Forms.Button();
+            this.btnRight = new System.Windows.Forms.Button();
             this.btnVisualNext = new System.Windows.Forms.Button();
             this.lblQuestionTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.visualmemorypanel = new System.Windows.Forms.Panel();
+            this.visualmemoryanswer = new System.Windows.Forms.PictureBox();
             this.visualmemorypic11 = new System.Windows.Forms.PictureBox();
             this.visualmemorypic8 = new System.Windows.Forms.PictureBox();
             this.visualmemorypic10 = new System.Windows.Forms.PictureBox();
@@ -59,9 +62,6 @@
             this.visualmemorypic2 = new System.Windows.Forms.PictureBox();
             this.visualmemorypic1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.visualmemoryanswer = new System.Windows.Forms.PictureBox();
-            this.btnRight = new System.Windows.Forms.Button();
-            this.btnWrong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOption1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -70,6 +70,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.visualmemorypanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.visualmemoryanswer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic10)).BeginInit();
@@ -82,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visualmemoryanswer)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxOption1
@@ -207,10 +207,30 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1011, 756);
             this.panel3.TabIndex = 13;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // btnWrong
+            // 
+            this.btnWrong.Location = new System.Drawing.Point(41, 242);
+            this.btnWrong.Name = "btnWrong";
+            this.btnWrong.Size = new System.Drawing.Size(75, 23);
+            this.btnWrong.TabIndex = 17;
+            this.btnWrong.Text = "Wrong";
+            this.btnWrong.UseVisualStyleBackColor = true;
+            // 
+            // btnRight
+            // 
+            this.btnRight.Location = new System.Drawing.Point(40, 213);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(75, 23);
+            this.btnRight.TabIndex = 16;
+            this.btnRight.Text = "Right";
+            this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // btnVisualNext
             // 
-            this.btnVisualNext.Location = new System.Drawing.Point(41, 184);
+            this.btnVisualNext.Location = new System.Drawing.Point(41, 190);
             this.btnVisualNext.Name = "btnVisualNext";
             this.btnVisualNext.Size = new System.Drawing.Size(75, 23);
             this.btnVisualNext.TabIndex = 15;
@@ -283,6 +303,15 @@
             this.visualmemorypanel.Size = new System.Drawing.Size(663, 538);
             this.visualmemorypanel.TabIndex = 14;
             this.visualmemorypanel.Visible = false;
+            // 
+            // visualmemoryanswer
+            // 
+            this.visualmemoryanswer.Location = new System.Drawing.Point(14, 12);
+            this.visualmemoryanswer.Name = "visualmemoryanswer";
+            this.visualmemoryanswer.Size = new System.Drawing.Size(641, 525);
+            this.visualmemoryanswer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.visualmemoryanswer.TabIndex = 16;
+            this.visualmemoryanswer.TabStop = false;
             // 
             // visualmemorypic11
             // 
@@ -394,34 +423,6 @@
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // visualmemoryanswer
-            // 
-            this.visualmemoryanswer.Location = new System.Drawing.Point(14, 12);
-            this.visualmemoryanswer.Name = "visualmemoryanswer";
-            this.visualmemoryanswer.Size = new System.Drawing.Size(641, 525);
-            this.visualmemoryanswer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.visualmemoryanswer.TabIndex = 16;
-            this.visualmemoryanswer.TabStop = false;
-            // 
-            // btnRight
-            // 
-            this.btnRight.Location = new System.Drawing.Point(40, 213);
-            this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(75, 23);
-            this.btnRight.TabIndex = 16;
-            this.btnRight.Text = "Right";
-            this.btnRight.UseVisualStyleBackColor = true;
-            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
-            // 
-            // btnWrong
-            // 
-            this.btnWrong.Location = new System.Drawing.Point(41, 242);
-            this.btnWrong.Name = "btnWrong";
-            this.btnWrong.Size = new System.Drawing.Size(75, 23);
-            this.btnWrong.TabIndex = 17;
-            this.btnWrong.Text = "Wrong";
-            this.btnWrong.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,6 +454,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.visualmemorypanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.visualmemoryanswer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic10)).EndInit();
@@ -465,7 +467,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualmemorypic1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visualmemoryanswer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

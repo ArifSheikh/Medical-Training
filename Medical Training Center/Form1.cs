@@ -21,7 +21,7 @@ namespace Medical_Training_Center
         static int CurrentQuestionID = 0;
         string caseSelection = string.Empty;
         static int intVisualMemPicCount = 0;
-        DataSet  ds;
+        DataSet ds;
         PictureBox LocalPictureBox;
 
 
@@ -48,6 +48,8 @@ namespace Medical_Training_Center
             adapter.SelectCommand = cmd;
             cmd.ExecuteNonQuery();
             adapter.Fill(ds);
+
+            GlobalData.dtQuestionData = ds.Tables[0];
 
             objQuestion.QuestionID = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
             CurrentQuestionID = objQuestion.QuestionID;
@@ -226,11 +228,10 @@ namespace Medical_Training_Center
             EnablePictureBox();
             CurrentQuestionID++;
             objQuestion.QuestionID = CurrentQuestionID;
-            CurrentQuestionID = objQuestion.QuestionID;
-            
+            //CurrentQuestionID = objQuestion.QuestionID;
+            GlobalData.CurrentQuestionID = CurrentQuestionID;
             try
             {
-                
                 if (ds.Tables[0].Rows[CurrentQuestionID][0] != null)
                 {
                     objQuestion.QuestionType = Convert.ToString(ds.Tables[0].Rows[CurrentQuestionID][1]);
@@ -243,16 +244,18 @@ namespace Medical_Training_Center
                     lblQuestionTitle.Text = objQuestion.QuestionTitle;
                     caseSelection = objQuestion.QuestionType.Trim();
 
-                    if (caseSelection != "VMM")
+                    if (caseSelection != "VMM" && !caseSelection.Equals("P"))
                     {
                         pictureBox1.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionName[0] + ".jpg");
                     }
-                    pictureBoxOption1.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[0] + ".jpg");
-                    pictureBox3.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[1] + ".jpg");
-                    pictureBox4.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[2] + ".jpg");
-                    pictureBox5.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[3] + ".jpg");
+                    if (!caseSelection.Equals("P"))
+                    {
+                        pictureBoxOption1.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[0] + ".jpg");
+                        pictureBox3.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[1] + ".jpg");
+                        pictureBox4.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[2] + ".jpg");
+                        pictureBox5.Image = Image.FromFile(ImagesDirectory + @"\" + objQuestion.QuestionOptions[3] + ".jpg");
+                    }
                 }
-
                 switch (caseSelection)
                 {
                     case "VD":
@@ -287,6 +290,13 @@ namespace Medical_Training_Center
                         visualmemoryanswer.Visible = false;
                         timer1.Start();
                         break;
+                    case "P":
+                        this.Hide();
+                        Puzzle objPuzzle = new Puzzle(objQuestion.QuestionTitle, (ImagesDirectory + @"\" + objQuestion.QuestionName[0] + ".jpg"));
+                        objPuzzle.Show();
+                        objPuzzle.LoadPicture();
+                        break;
+
                 }
             }
             catch (Exception ex)
@@ -333,7 +343,7 @@ namespace Medical_Training_Center
                 visualmemoryanswer.Tag = objQuestion.QuestionOptions[0];
             }
             timer1.Stop();
-            
+
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -397,12 +407,17 @@ namespace Medical_Training_Center
 
         private void btnRight_Click(object sender, EventArgs e)
         {
-            bool flag=false;
+            bool flag = false;
 
-            if(objQuestion.QuestionAnswer.Contains(visualmemoryanswer.Tag))
+            if (objQuestion.QuestionAnswer.Contains(visualmemoryanswer.Tag))
             {
                 flag = true;
             }
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 

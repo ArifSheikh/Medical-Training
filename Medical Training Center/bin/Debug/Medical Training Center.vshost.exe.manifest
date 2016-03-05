@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Medical Training Center.exe" size="1917952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Medical Training Center.exe" size="1986560">
       <assemblyIdentity name="Medical Training Center" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0iv+ml08rg6sfFzKTvBsJFKQoP0=</dsig:DigestValue>
+        <dsig:DigestValue>X7gwjTwtkx99cn6OdJjOrn62DoI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -995,7 +995,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>3lEmGG+FH18b028T/kEGvPlp+38=</dsig:DigestValue>
+      <dsig:DigestValue>kqbAazwHYkQKvedlpd7WzrOQ//E=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
