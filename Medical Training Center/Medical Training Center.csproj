@@ -92,7 +92,6 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,7 +99,6 @@
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalData.cs" />
-=======
     <Compile Include="Mathematics\BeforeAndAfter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,7 +135,6 @@
     <Compile Include="Mathematics\SkipCountingBackwards.Designer.cs">
       <DependentUpon>SkipCountingBackwards.cs</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
     <Compile Include="MedicalDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,10 +159,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< Updated upstream
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Mathematics\BeforeAndAfter.resx">
       <DependentUpon>BeforeAndAfter.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,7 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mathematics\SkipCountingBackwards.resx">
       <DependentUpon>SkipCountingBackwards.cs</DependentUpon>
->>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -309,9 +304,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Images\P3.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Images\P4.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Images\Pink1.jpg">
@@ -581,6 +573,7 @@
     <Content Include="Images\VSM1_4.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Wrong.jpg" />
     <Content Include="Images\WrongOld.png" />
     <Content Include="Images\YellowQ.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
