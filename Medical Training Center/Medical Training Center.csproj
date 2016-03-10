@@ -74,11 +74,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Mathematics\Missingnumbers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Mathematics\Missingnumbers.Designer.cs">
+      <DependentUpon>Missingnumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -86,6 +92,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +100,44 @@
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalData.cs" />
+=======
+    <Compile Include="Mathematics\BeforeAndAfter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mathematics\BeforeAndAfter.Designer.cs">
+      <DependentUpon>BeforeAndAfter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mathematics\CountAndAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mathematics\CountAndAdd.Designer.cs">
+      <DependentUpon>CountAndAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mathematics\HorizontalAddition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mathematics\HorizontalAddition.Designer.cs">
+      <DependentUpon>HorizontalAddition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mathematics\JugglingWithnumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mathematics\JugglingWithnumbers.Designer.cs">
+      <DependentUpon>JugglingWithnumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mathematics\NumberSequence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mathematics\NumberSequence.Designer.cs">
+      <DependentUpon>NumberSequence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mathematics\SkipCountingBackwards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mathematics\SkipCountingBackwards.Designer.cs">
+      <DependentUpon>SkipCountingBackwards.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="MedicalDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,14 +153,37 @@
       <DependentUpon>Puzzle.cs</DependentUpon>
     </Compile>
     <Compile Include="QuestionVO.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Mathematics\Missingnumbers.resx">
+      <DependentUpon>Missingnumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< Updated upstream
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Mathematics\BeforeAndAfter.resx">
+      <DependentUpon>BeforeAndAfter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mathematics\CountAndAdd.resx">
+      <DependentUpon>CountAndAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mathematics\HorizontalAddition.resx">
+      <DependentUpon>HorizontalAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mathematics\JugglingWithnumbers.resx">
+      <DependentUpon>JugglingWithnumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mathematics\NumberSequence.resx">
+      <DependentUpon>NumberSequence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mathematics\SkipCountingBackwards.resx">
+      <DependentUpon>SkipCountingBackwards.cs</DependentUpon>
+>>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -427,6 +495,90 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\VMM1_9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM2_9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VMM3_9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VSM1_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VSM1_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VSM1_3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VSM1_4.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\WrongOld.png" />
