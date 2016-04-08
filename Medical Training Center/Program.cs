@@ -15,7 +15,7 @@ namespace Medical_Training_Center
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mathematics.Missingnumbers());
+            Application.Run(new FindTheSameShape());
         }
     }
 }

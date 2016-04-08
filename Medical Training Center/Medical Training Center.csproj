@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindTheSameShape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindTheSameShape.Designer.cs">
+      <DependentUpon>FindTheSameShape.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mathematics\Missingnumbers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
       <DependentUpon>Puzzle.cs</DependentUpon>
     </Compile>
     <Compile Include="QuestionVO.cs" />
+    <EmbeddedResource Include="FindTheSameShape.resx">
+      <DependentUpon>FindTheSameShape.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mathematics\Missingnumbers.resx">
       <DependentUpon>Missingnumbers.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +197,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Puzzle.resx">
       <DependentUpon>Puzzle.cs</DependentUpon>
@@ -297,6 +307,22 @@
     <Content Include="Images\OvalQ.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Answer4.jpg" />
+    <None Include="Resources\Q4.JPG" />
+    <None Include="Resources\option4.JPG" />
+    <None Include="Resources\Q34.JPG" />
+    <None Include="Resources\Q33.JPG" />
+    <None Include="Resources\Q32.JPG" />
+    <None Include="Resources\Q35.JPG" />
+    <None Include="Resources\Option3.JPG" />
+    <None Include="Resources\Answer2.jpg" />
+    <None Include="Resources\Option21.JPG" />
+    <None Include="Resources\q2.JPG" />
+    <None Include="Resources\Option2.JPG" />
+    <None Include="Resources\Answer1.jpg" />
+    <None Include="Resources\Shaape1.JPG" />
+    <None Include="Resources\Q1.JPG" />
+    <None Include="Resources\Option1.JPG" />
     <None Include="Images\P1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
